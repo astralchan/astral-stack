@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  client-dev:
+    build:
+      context: .
+      target: dev
+    ports:
+      - 8000:8000
+  client-prod:
+    build:
+      context: .
+      target: prod
+    ports:
+      - 80:80

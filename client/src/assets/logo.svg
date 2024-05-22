@@ -1,0 +1,12 @@
+<svg
+  xmlns='http://www.w3.org/2000/svg'
+  width='32rem'
+  viewBox='-16.5 -16.5 33 33'>
+  <title>Logo</title>
+  <circle r='2' fill='#b3b' />
+  <g stroke='#b3b' fill='none'>
+    <ellipse rx='16' ry='8' />
+    <ellipse rx='16' ry='8' transform='rotate(60)' />
+    <ellipse rx='16' ry='8' transform='rotate(120)' />
+  </g>
+</svg>
