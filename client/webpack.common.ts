@@ -1,6 +1,7 @@
 import { type Configuration } from 'webpack';
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
 const common: Configuration = {
   entry: {
@@ -24,7 +25,7 @@ const common: Configuration = {
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader', 'postcss-loader']
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader']
       },
       {
         test: /\.(jpe?g|png|svg|gif)/i,
@@ -36,7 +37,8 @@ const common: Configuration = {
     new HtmlWebpackPlugin({
       template: './public/index.html',
       favicon: './public/favicon.svg'
-    })
+    }),
+    new MiniCssExtractPlugin()
   ]
 };
 
